@@ -80,7 +80,7 @@ Data is aggregated at a central gateway and pushed to a cloud dashboard for real
 [Nowcasting model input]
 ```
 <p align="center">
-  <img src="images/lband_setup.jpg" width="90%"/>
+  <img src="images/L_band.jpg" width="500"/>
   <br>
    L-band satellite reception setup consisting of parabolic dish antenna and SDR-based signal acquisition hardware used for meteorological satellite reception.
 </p>

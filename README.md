@@ -57,7 +57,11 @@ The distributed sensing network consists of LoRaWAN-enabled weather station node
 Data is aggregated at a central gateway and pushed to a cloud dashboard for real-time visualisation and modelling.
 
 **Showcased at:** India Mobile Congress (IMC) 2025
-
+<p align="center">
+  <img src="images/imc.jpg" width="400"/>
+  <br>
+   Environmental sensing node for hyperlocal atmospheric monitoring applications.
+</p>
 ---
 
 ## 🛰️ Satellite Reception Pipeline
@@ -75,7 +79,11 @@ Data is aggregated at a central gateway and pushed to a cloud dashboard for real
             ↓
 [Nowcasting model input]
 ```
-
+<p align="center">
+  <img src="images/lband_setup.jpg" width="90%"/>
+  <br>
+   L-band satellite reception setup consisting of parabolic dish antenna and SDR-based signal acquisition hardware used for meteorological satellite reception.
+</p>
 ---
 
 ## 🤝 Collaborations

@@ -16,20 +16,6 @@ The centre was funded through the **IEEE EPICS (Engineering Projects in Communit
 
 ---
 
-## 🖼️ Suggested Media to Add
-
-| What to Add | Where to Get It |
-|---|---|
-| Photo of LoRa weather station node from IMC 2025 showcase | Already have (Fig 1 from SkyPulse doc) |
-| Photo of equipment rack | Already have (Fig 2 from SkyPulse doc) |
-| Photo of 1.8m L-band dish antenna on rooftop | Already have (Fig 3 from SkyPulse doc) |
-| Photo of 3D printer | Already have (Fig 4 from SkyPulse doc) |
-| Photo of soldering workbench | Already have (Fig 5 from SkyPulse doc) |
-| Map showing ~45 km coverage radius around Bengaluru | Create in Google Maps / draw on satellite view |
-| Architecture diagram of LoRaWAN node network | Draw a block diagram showing node → gateway → cloud |
-| Screenshot of any dashboard/received satellite data | Export when available |
-
----
 
 ## 🎯 Research Focus Areas
 

@@ -1,109 +1,147 @@
-# 🌦️ SkyPulse – Distributed Weather Monitoring Network
+# SkyPulse – Centre for RF, Remote Sensing & Data Analytics
 
-> **IEEE EPICS Funded Project | Rs. 7.13 Lakh Grant**
+> An IEEE EPICS-funded multidisciplinary research centre and distributed atmospheric sensing network at BMSIT&M, targeting hyperlocal urban climate characterisation, satellite signal reception, and RF propagation studies across the Bengaluru region.
 
-A 16-node distributed atmospheric sensing network deployed across Bengaluru, providing hyperlocal weather intelligence using LoRa mesh communication.
-
----
-
-## 📌 Problem Statement
-
-Existing weather monitoring infrastructure relies on sparse, centralized stations that fail to capture hyperlocal atmospheric variations across large urban areas. City-scale microclimate differences — critical for agriculture, disaster management, and urban planning — go unmeasured.
+![IEEE EPICS Funded](https://img.shields.io/badge/IEEE%20EPICS-Rs.%207.25%20Lakh-blue)
+![Status](https://img.shields.io/badge/Status-Active%20Research-green)
+![Established](https://img.shields.io/badge/Established-October%202025-orange)
 
 ---
 
-## 💡 Solution
+## 🌍 Overview
 
-SkyPulse is a scalable, low-power distributed sensor network of 16 nodes spread across Bengaluru. Each node independently captures atmospheric parameters and relays data via LoRa mesh to a central aggregation server, forming a city-scale hyperlocal weather intelligence platform.
+SkyPulse is a research centre established in October 2025 at BMS Institute of Technology & Management. It operates at the intersection of **radio-frequency engineering**, **satellite-based remote sensing**, and **data-driven atmospheric analysis**. The centre takes an end-to-end systems approach — from hardware prototyping and signal acquisition to data processing and analytical modelling.
 
----
-
-## 🏗️ System Architecture
-
-```
-[Sensor Node x16]
-   ├── Wind Speed Sensor
-   ├── Rain Gauge
-   ├── UV Index Sensor
-   └── Particulate Matter (PM2.5/PM10)
-         │
-    [LoRa Module]
-         │  (Long-range, low-power mesh)
-         ▼
-[Central Gateway / Aggregation Server]
-         │
-    [Cloud Dashboard]
-         └── Real-time Visualization
-         └── Historical Trend Analysis
-         └── Alert System
-```
+The centre was funded through the **IEEE EPICS (Engineering Projects in Community Service)** programme, sanctioned at **₹7,25,000/-** in May 2025.
 
 ---
 
-## ⚙️ Hardware Stack
+## 🖼️ Suggested Media to Add
 
-| Component | Purpose |
+| What to Add | Where to Get It |
 |---|---|
-| ESP32 | Node microcontroller |
-| LoRa SX1276 | Long-range mesh communication |
-| Anemometer | Wind speed measurement |
-| Tipping Bucket Rain Gauge | Rainfall measurement |
-| ML8511 UV Sensor | UV index measurement |
-| PMS5003 | PM2.5 / PM10 particulate matter |
-| Custom PCB (Altium) | Node integration board |
-| Solar Panel + LiPo | Low-power autonomous operation |
+| Photo of LoRa weather station node from IMC 2025 showcase | Already have (Fig 1 from SkyPulse doc) |
+| Photo of equipment rack | Already have (Fig 2 from SkyPulse doc) |
+| Photo of 1.8m L-band dish antenna on rooftop | Already have (Fig 3 from SkyPulse doc) |
+| Photo of 3D printer | Already have (Fig 4 from SkyPulse doc) |
+| Photo of soldering workbench | Already have (Fig 5 from SkyPulse doc) |
+| Map showing ~45 km coverage radius around Bengaluru | Create in Google Maps / draw on satellite view |
+| Architecture diagram of LoRaWAN node network | Draw a block diagram showing node → gateway → cloud |
+| Screenshot of any dashboard/received satellite data | Export when available |
 
 ---
 
-## 📡 Communication Protocol
+## 🎯 Research Focus Areas
 
-- **Technology:** LoRa (Long Range)
-- **Topology:** Mesh network
-- **Range:** Up to 10 km line-of-sight per node
-- **Power:** Ultra-low-power sleep/wake cycles
-- **Data Rate:** Optimized for periodic telemetry bursts
+1. **Urban Microclimate Nowcasting** — Development of hyperlocal weather prediction models for the Bengaluru region (~45 km radius), combining ground sensor data with satellite imagery.
 
----
+2. **Satellite Signal Reception & Processing** — X-band and L-band satellite signal acquisition for meteorological and remote sensing applications (e.g., INSAT, NOAA, Meteor-M).
 
-## 🛠️ PCB Design
+3. **RF Propagation Studies** — Experimental characterisation of atmospheric attenuation, signal variability, and propagation effects due to weather phenomena.
 
-- Designed in **Altium Designer**
-- Compact form factor for weatherproof enclosure
-- Integrated LoRa antenna footprint
-- Low-power voltage regulation circuitry
-- Certification: Altium Designer Essentials
+4. **Embedded RF Subsystems** — Design, prototyping, and validation of low-power RF and embedded sensing nodes for the distributed sensor network.
+
+5. **Urban Climate Datasets & Early Warning** — Generation of validated longitudinal environmental datasets and frameworks for flood risk, urban heat island analysis, and climate-resilient planning.
 
 ---
 
-## 📊 Data Pipeline
+## 🔧 Centre Infrastructure
+
+| Equipment | Purpose |
+|---|---|
+| 1.8 m L-band Parabolic Dish Antenna + Antenna Tracker | Geostationary weather satellite reception (INSAT, etc.) |
+| Software-Defined Radio (SDR) Receivers | Signal acquisition and processing for X-band and L-band |
+| Vector Network Analyser (VNA) | RF characterisation of antennas and components |
+| LoRaWAN Development Kits | Low-power sensor network node testing |
+| RF Soldering & Prototyping Workstation | SMD/THT assembly for antenna and RF board fabrication |
+| 3D Printer (256 mm³ build volume) | Rapid fabrication of PCB enclosures, antenna mounts, brackets |
+| GPU Workstation + NAS *(expected 2026)* | Machine learning model training on climate datasets |
+
+---
+
+## 🌐 LoRaWAN Sensor Network
+
+The distributed sensing network consists of LoRaWAN-enabled weather station nodes deployed across the Bengaluru urban area. Each node measures:
+
+- Temperature, Humidity (atmospheric)
+- Particulate Matter (PM1.0, PM2.5, PM10)
+- Barometric Pressure
+- Wind speed/direction *(planned)*
+
+Data is aggregated at a central gateway and pushed to a cloud dashboard for real-time visualisation and modelling.
+
+**Showcased at:** India Mobile Congress (IMC) 2025
+
+---
+
+## 🛰️ Satellite Reception Pipeline
 
 ```
-Node Sensors → ESP32 ADC/GPIO → LoRa Transmission
-    → Gateway Receiver → MQTT Broker
-    → Cloud Storage → Dashboard Visualization
+[Geostationary Satellite (L-band)]
+            ↓
+[1.8m Parabolic Dish + LNB]
+            ↓
+[SDR Receiver (RTL-SDR / Airspy)]
+            ↓
+[GNU Radio / SatDump signal processing]
+            ↓
+[Decoded meteorological imagery & data]
+            ↓
+[Nowcasting model input]
 ```
 
 ---
 
-## 🚧 Current Status
+## 🤝 Collaborations
 
-- [x] Project funded (IEEE EPICS Grant – Rs. 7.13 Lakh)
-- [x] Hardware prototyping underway
-- [x] PCB design completed in Altium
-- [x] LoRa communication protocol validated
-- [ ] Full 16-node deployment (in progress)
-- [ ] City-scale data aggregation dashboard (in progress)
-
----
-
-## 🏆 Recognition
-
-- **IEEE EPICS Grant** – Rs. 7.13 Lakh for city-scale deployment
+| Partner | Contribution |
+|---|---|
+| IEEE EPICS in IEEE | Project funding (₹7,25,000) |
+| IEEE Antennas & Propagation Society (AP-S) | Technical mentorship for antenna design |
+| IEEE Communications Society (ComSoc) | Capacity building for RF and communication subsystems |
+| Bradley University, USA | Expertise in anechoic chamber design and EM measurement |
+| Green Circle NGO, Bengaluru | Community outreach and ground-level engagement |
 
 ---
 
-## 👤 Author
+## 📋 Project Outcomes (Planned)
 
-**Sri Srujan Hari T**
-B.E – Electronics & Communication Engineering, BMSIT&M
-[LinkedIn](https://www.linkedin.com/in/srujan-hari-undefined-1a7364399) | thammineedisrujanhari@gmail.com
+- ✅ Functional L-band and X-band satellite ground station
+- ✅ Hyperlocal environmental dataset for Bengaluru urban area
+- 🔄 Short-term weather nowcasting models (cloud movement, rainfall prediction)
+- 🔄 RF propagation and atmospheric attenuation studies
+- 🔄 Urban heat island and flood risk analysis
+- 🔄 Student research publications and hands-on training programme
+
+---
+
+## 👥 Team & Investigators
+
+| Name | Role |
+|---|---|
+| Dr. Anitha V R | Principal Investigator |
+| Nitish K S | Co-Investigator |
+| Tarun Patil | Co-Investigator |
+| Sri Srujan Hari T | Hardware Lead / Prototyping |
+
+**Institution:** BMS Institute of Technology & Management, Yelahanka, Bengaluru – 560119
+
+---
+
+## 📅 Timeline
+
+| Milestone | Date |
+|---|---|
+| Centre established | October 2025 |
+| EPICS proposal submitted | May 1, 2025 |
+| EPICS funding sanctioned (₹7,25,000) | May 2025 |
+| LoRaWAN node showcased at IMC 2025 | 2025 |
+| GPU Workstation + NAS facility (expected) | 2026 |
+
+---
+
+## 📬 Contact
+
+For research collaborations or enquiries:
+**Email:** thammineedisrujanhari@gmail.com
+**Institution:** BMSIT&M, Yelahanka, Bengaluru

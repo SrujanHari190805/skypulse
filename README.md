@@ -116,7 +116,8 @@ Data is aggregated at a central gateway and pushed to a cloud dashboard for real
 | Dr. Anitha V R | Principal Investigator |
 | Nitish K S | Co-Investigator |
 | Tarun Patil | Co-Investigator |
-| Sri Srujan Hari T | Hardware Lead / Prototyping |
+| Harshitha K V | Hardware / Prototyping |
+| Sri Srujan Hari T | Hardware / Prototyping |
 
 **Institution:** BMS Institute of Technology & Management, Yelahanka, Bengaluru – 560119
 
